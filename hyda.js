@@ -10,20 +10,20 @@ define([], function() {
             enabled: true,
             parameters: {
                 gain1: {
-                    name: ['Gain 1'],
+                    name: ['Gain A'],
                     label: 'x',
                     range: {
                         min: 0,
-                        default: 0.5,
+                        default: 1,
                         max: 2
                     }
                 },
                 gain2: {
-                    name: ['Gain 1'],
+                    name: ['Gain B'],
                     label: 'x',
                     range: {
                         min: 0,
-                        default: 0.5,
+                        default: 1,
                         max: 2
                     }
                 }
