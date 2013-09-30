@@ -1,4 +1,4 @@
-define([], function() {
+define(['require'], function() {
   
   var pluginConf = {
       name: "HyDA",
@@ -38,7 +38,7 @@ define([], function() {
       this.audioSource = args.audioSources[0];
       this.audioDestinations = args.audioDestinations;
       this.context = args.audioContext;
-  		this.gainDuplicatorNodes = [];
+      this.gainDuplicatorNodes = [];
 
       for (var i = 0; i < this.audioDestinations.length; i+=1) {
         this.gainDuplicatorNodes[i] = this.context.createGainNode();
@@ -53,9 +53,9 @@ define([], function() {
           this.gainDuplicatorNodes[0].gain.value = value;
         }
         else if (id === 'gain2') {
-          this.gainDuplicatorNodes[1].gain.value = value; 
+          this.gainDuplicatorNodes[1].gain.value = value;
         }
-      }
+      };
 
       if (args.initialState && args.initialState.data) {
           /* Load data */
@@ -69,7 +69,7 @@ define([], function() {
           };
       }
 
-      for (param in this.pluginState) {
+      for (var param in this.pluginState) {
             if (this.pluginState.hasOwnProperty(param)) {
                 args.hostInterface.setParm (param, this.pluginState[param]);
                 onParmChange.apply (this, [param, this.pluginState[param]]);
