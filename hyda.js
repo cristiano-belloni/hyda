@@ -5,7 +5,8 @@ define(['require'], function() {
       osc: false,
       audioOut: 2,
       audioIn: 1,
-      version: '0.0.1-alpha1',
+      version: '0.0.1',
+      hyaId: 'HYDA',
       hostParameters : {
             enabled: true,
             parameters: {
