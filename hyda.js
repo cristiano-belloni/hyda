@@ -41,7 +41,7 @@ define(['require'], function() {
       this.gainDuplicatorNodes = [];
 
       for (var i = 0; i < this.audioDestinations.length; i+=1) {
-        this.gainDuplicatorNodes[i] = this.context.createGainNode();
+        this.gainDuplicatorNodes[i] = this.context.createGain();
         this.audioSource.connect(this.gainDuplicatorNodes[i]);
         this.gainDuplicatorNodes[i].connect(this.audioDestinations[i]);
       }
